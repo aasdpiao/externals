@@ -1,0 +1,14 @@
+#心跳
+heartbeat 101{
+	request {
+	}
+	response {
+	}
+}
+#账号异地登录
+account_remote_login 102{
+	request {
+	}
+	response {
+	}
+}

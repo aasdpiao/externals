@@ -1,0 +1,13 @@
+#心跳
+heartbeat 101{
+	request {
+	}
+	response {
+	}
+}
+#获取角色数据
+get_role_data 102 {
+	response {
+		role_data 0 : role_data
+	}
+}

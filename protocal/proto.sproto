@@ -1,0 +1,48 @@
+.package{
+	type 0 : integer
+	session 1 : integer
+}
+
+#角色属性
+.data_attr{
+	attr_key 0 : integer       #属性名
+	attr_value 1 : integer     #属性值
+}
+
+#存档数据
+.role_data{
+	role_object 0 : role_object             #玩家信息
+	package 1 : *item_object                #玩家背包
+	equip_objects 2 : *equip_object         #玩家装备
+	role_attrs 3 : *data_attr               #玩家属性
+	gold 4 : integer                        #玩家金币
+	diamond 5 : integer                     #玩家钻石
+}
+
+#角色数据
+.role_object{
+	role_id 0 : integer          #角色ID
+	role_name 1 : string         #角色名
+	role_level 2 : integer       #角色等级
+	role_exp 3 : integer         #角色经验
+	role_vip 4 : integer         #角色VIP等级
+	role_vip_exp 5 : integer     #角色VIP经验
+	head_index 6 : integer       #头像索引
+}
+
+#物品数据
+.item_object{
+	item_id 0 : integer
+	item_index 1 : integer
+	item_count 2 : integer
+	item_attrs 3 : *data_attr   #物品属性
+}
+
+#装备数据
+.equip_object{
+	equip_id 0 : integer       #装备ID
+	equip_index 1 : integer    #装备索引
+	equip_level 2 : integer    #装备等级
+	equip_exp 3 : integer      #装备经验
+	equip_attrs 4 : *data_attr #装备属性 
+}
